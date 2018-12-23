@@ -1,0 +1,103 @@
+<html>
+<head><title>XO</title></head>
+<style>
+    fieldset{border-color:gray;background-color:red;width:50%;height:50%;margin-left: 250px;}
+    #hello1{background-color:white; width: 12%;color:blue;height:10%;box-shadow:0 0 white;border-top-color: white;border-bottom-color: white; border-right-color:whitesmoke;position:fixed;margin-left: 50px;}
+    #hello2{background-color: white;width:11.79%;color:blue;height: 10%;box-shadow:0 0 white;border-top-color: white;border-bottom-color: white;border-right-color:white;margin-left: 214px;position:fixed;}
+    #hello3{background-color: white;width:24%;color:blue;height:20.5%;box-shadow:0 0 white;border-top-color:white;border-bottom-color:white;margin-left:374px;}
+    #hello4{width:24%;height:25%;margin-left:50px;margin-bottom:0px;background-color: white;color:blue;}
+    #hello5{width:24%;height: 25%;margin-left:-4px;margin-top:-10px;background-color: white;color:blue;}
+    #hello6{width:24%;height:25%;margin-left:-4px;margin-top:-10px;background-color: white;color:blue;}
+    #hello7{width:24%;height:25%;margin-left:50px;margin-top:-4px;background-color: white;color:blue;}
+    #hello8{width:24%;height:25%;margin-left:-4px;margin-top:-4px;background-color: white;color:blue;}
+    #hello9{width:24%;height:25%;margin-left:-4px;margin-top:-4px;background-color: white;color:blue;}
+</style>
+<body>
+<fieldset><div>
+        <input type="button" value=""  class="hello1" id="hello1" width="250"/>
+        <input type="button" value="" id="hello2"/>
+        <input type="button" value="" id="hello3"/>
+        <input type="button" value="" id="hello4"/>
+        <input type="button" value="" id="hello5"/>
+        <input type="button" value="" id="hello6"/>
+        <input type="button" value="" id="hello7"/>
+        <input type="button" value="" id="hello8"/>
+        <input type="button" value="" id="hello9"/>
+    </div>
+</fieldset>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script>
+            $(function(){
+                 var i=0, some1,som2,some3,some4,some5,some6,some7,some8,some9;
+                $('#hello1').one('click',function(){
+                    if(i==0){
+                some1=$('#hello1').attr('value','O');i++;
+               $.fn.game();
+                }
+                     else if(i!=0){some1=$('#hello1').val('X');i=0;  $.fn.game();}
+                });
+                $('#hello2').one('click',function(){
+                    if(i==0){ some2=$('#hello2').val('O');i++;  $.fn.game();}else{some2=$('#hello2').val('X');i=0;  $.fn.game();}
+                });  $('#hello3').one('click',function(){
+                    if(i==0){some3=$('#hello3').val('O');i++;  $.fn.game();}else{some3=$('#hello3').val('X');i=0;  $.fn.game();}
+                });  $('#hello4').one('click',function(){
+                    if(i==0){some4=$('#hello4').val('O');i++;  $.fn.game();}else{some4=$('#hello4').val('X');i=0;  $.fn.game();}
+                });  $('#hello5').one('click',function(){
+                    if(i==0){some5=$('#hello5').val('O');i++;  $.fn.game();}else{some5=$('#hello5').val('X');i=0;  $.fn.game();}
+                });  $('#hello6').one('click',function(){
+                    if(i==0){some6=$('#hello6').val('O');i++;  $.fn.game();}else{some6=$('#hello6').val('X');i=0;  $.fn.game();}
+                });  $('#hello7').one('click',function(){
+                    if(i==0){some7=$('#hello7').val('O');i++;  $.fn.game();}else{some7=$('#hello7').val('X');i=0;  $.fn.game();}
+                });  $('#hello8').one('click',function(){
+                    if(i==0){some8=$('#hello8').val('O');i++;  $.fn.game();}else{some8=$('#hello8').val('X');i=0;  $.fn.game();}
+                });  $('#hello9').one('click',function(){
+                    if(i==0){some9=$('#hello9').val('O');i++;  $.fn.game();}else{some9=$('#hello9').val('X');i=0;  $.fn.game();}
+                });
+                  $.fn.game=function(){if((some1.val()==='O')&&(some2.val()==='O')&&(some3.val()==='O'))
+                  {
+                      $('#hello1').css('background-color','red');
+                      $('#hello2').css('background-color','red');
+                      $('#hello3').css('background-color','red');
+                  }
+                   else if((some4.val()==='O')&&(some5.val()==='O')&&(some6.val()==='O'))
+                  {
+                      $('#hello4').css('background-color','red');
+                      $('#hello5').css('background-color','red');
+                      $('#hello6').css('background-color','red');
+                  }
+                  else if((some7.val()==='O')&&(some8.val()==='O')&&(some9.val()==='O'))
+                  {
+                      $('#hello7').css('background-color','red');
+                      $('#hello8').css('background-color','red');
+                      $('#hello9').css('background-color','red');
+                  }else if(((some1.val()==='O')&&(some5.val()==='O')&&(some9.val()==='O'))||((some5.val()==='O')&&(some1.val()==='O')&&(some9.val()==='O')))
+                  {
+                      $('#hello1').css('background-color','red');
+                      $('#hello5').css('background-color','red');
+                      $('#hello9').css('background-color','red');
+                  }else if((some3.val()==='O')&&(some5.val()==='O')&&(some7.val()==='O'))
+                  {
+                      $('#hello3').css('background-color','red');
+                      $('#hello5').css('background-color','red');
+                      $('#hello7').css('background-color','red');
+                  }else if((some1.val()==='O')&&(some4.val()==='O')&&(some7.val()==='O'))
+                  {
+                      $('#hello1').css('background-color','red');
+                      $('#hello4').css('background-color','red');
+                      $('#hello7').css('background-color','red');
+                  }else if((some2.val()==='O')&&(some5.val()==='O')&&(some8.val()==='O'))
+                  {
+                      $('#hello2').css('background-color','red');
+                      $('#hello5').css('background-color','red');
+                      $('#hello8').css('background-color','red');
+                  } else if((some3.val()==='O')&&(some6.val()==='O')&&(some9.val()==='O'))
+                  {
+                      $('#hello2').css('background-color','red');
+                      $('#hello5').css('background-color','red');
+                      $('#hello').css('background-color','red');
+                  }
+                  }
+            });
+        </script>
+     </body>
+</html>

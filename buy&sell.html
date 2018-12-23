@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title> buy&sell </title><meta name="viewport" content="width=device-width"/>
+			<style type="text/css">
+				body{
+					background-image:url(buy.JPEG);
+					background-attachment:fixed;
+					background-repeat:no-repeat;
+					}@viewport{width:980px;min-zoom:0.25;max-zoom:3;orientation:landscape;}
+				input[type=button]{
+				border-radius:4px;
+				color:blue;
+				box-sizing:border-box;
+				background-color:white;
+				border-color:gray;
+				width:6%;
+				margin-left:-1px;
+				margin-top:260px;
+				float:left;
+				
+				}
+					button{border-radius:4px;color:blue;border-color:gray;margin-left:-954px;margin-top:260px;width:6%;background-color:white;}
+					.field{background-color:blue;border-radius:5px;border-color:gray;width:50%;height:300px;}
+					#lin{border-radius:4px;color:blue;border-color:gray;margin-left:-320px;margin-top:0px;width:10%;background-color:white;}
+			</style>
+			<script type="text/javascript">
+					function sell(){document.getElementById('field1').style.display="block";}
+			</script>
+	</head>
+			<body>
+				
+					<input type="button" name="" value="home" onclick="window.location.href='project.html';"><input type="button" name="buy" value="buy" size=50><input type="button" name="" value="sell" onclick="sell()"><input type="button" name="" value="auction">
+					<center><button>sign up</button></center>
+						<fieldset id="field1" class="field" style="display:none;">
+							<p>PROJECT DESCRIPTION<textarea name="sell" rows="10" cols="10"></textarea></p>
+							<p>UP LOAD IMAGES<input type="file"></p>
+							<center><button id="lin"><a href="form.html">submit</a></button></center>
+						</fieldset>
+					
+			</body>
+</html>
