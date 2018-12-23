@@ -1,0 +1,43 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author hp
+ */
+public class NewClass4 {
+    public static void main(String args[])
+    {
+        int i,j;
+        int counter=0;
+        int count;
+        for(int num=2;num<10000000;num++)
+        {
+            count=0;
+            for(int factor=1;factor<=num;factor++)
+            {
+                if(num%factor==0)
+                {
+                    count++;
+                    
+                }
+
+            }
+            if(count==2)
+            {
+      
+                counter++;
+            }
+            if(counter==10001){
+                System.out.println(num);
+                break;
+            }
+         
+
+        }
+       
+    }
+
+}

@@ -1,0 +1,29 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author hp
+ */
+public class Factsum {
+    public static void main(String args[])
+    {
+        long i,fact=1,a;
+        for(i=1;i<=100;i++)
+        {
+            fact=fact*i;
+        }
+        System.out.println(fact);
+        long s=0;
+        while(fact>0)
+        {
+            a=fact%10;
+            fact=fact/10;
+            s=a+s;
+        }
+        System.out.println(s);
+    }
+
+}

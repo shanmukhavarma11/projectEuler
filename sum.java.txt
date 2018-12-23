@@ -1,0 +1,32 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author hp
+ */
+public class Sum {
+    public static void main(String args[])
+    {
+        long r,i,l=0,sum=0,k=0,s=0,j;
+        for(i=1;k<50;i++)
+        {
+            sum=sum+k;
+            k=3*i;
+        }
+        for(j=1;s<50;j++)
+        {
+          
+          l=l+s;
+          s=5*j;
+        }
+        System.out.println(l);
+       
+        System.out.println(sum);
+        r=sum+l;
+        System.out.println(r);
+    }
+
+}
